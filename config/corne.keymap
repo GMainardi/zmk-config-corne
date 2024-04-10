@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -46,10 +45,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE         &kp N1           &kp N2    &kp N3                &kp N4                 &kp N5         &kp N6         &kp N7          &kp N8           &kp N9          &kp N0        &kp BSPC
-&kp LEFT_CONTROL  &kp DOLLAR       &kp PLUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN    &kp PIPE       &kp MINUS       &kp EQUAL        &kp UNDERSCORE  &kp ASTERISK  &kp RIGHT_CONTROL
-&kp LSHFT         &kp EXCLAMATION  &kp HASH  &kp RIGHT_BRACKET     &kp RIGHT_BRACKET      &kp TILDE      &kp AMPERSAND  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT     &kp CARET     &kp RIGHT_SHIFT
-                                             &trans                &kp TAB                &kp SPACE      &kp RET        &kp BACKSPACE   &trans
+&kp TAB    &kp EXCL        &kp AT           &kp HASH          &kp DOLLAR         &kp PERCENT    &kp CARET          &kp AMPERSAND  &kp STAR         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ESCAPE
+&kp EQUAL  &kp NUMBER_1    &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4       &kp N5         &kp NUMBER_6       &kp N7         &kp N8           &kp N9                &kp N0                 &kp MINUS
+&kp LSHFT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDER      &kp GRAVE          &trans         &trans           &kp COMMA             &kp DOT                &kp BACKSLASH
+                                            &trans            &kp SPACE          &kp RETURN     &kp RIGHT_CONTROL  &kp BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
 
@@ -61,19 +60,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_SEL 0  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5       &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &trans
-&trans        &kp A   &kp S   &kp W   &kp D    &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
-&trans        &trans  &trans  &trans  &trans   &trans       &trans          &trans          &trans        &trans           &trans   &trans
-                              &trans  &kp TAB  &kp SPACE    &kp RET         &kp BACKSPACE   &mo 3
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4     &kp F5        &kp F6             &kp F7          &kp F8        &kp F9           &kp F10  &trans
+&trans  &kp A   &kp S   &kp W   &kp D      &trans        &kp LEFT_ARROW     &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&trans  &trans  &trans  &trans  &trans     &trans        &trans             &trans          &trans        &trans           &trans   &trans
+                        &trans  &kp SPACE  &kp RETURN    &kp RIGHT_CONTROL  &kp BACKSPACE   &trans
             >;
         };
     };
