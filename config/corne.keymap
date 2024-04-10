@@ -13,7 +13,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -31,10 +31,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE  &kp Q  &kp D  &kp R  &kp W    &kp B        &kp Y    &kp F          &kp U      &kp P    &kp SEMICOLON  &kp EQUAL
-&kp PLUS   &hm LCTRL A  &hm LSHIFT S  &kp H  &kp T    &kp G        &kp Y    &kp N          &kp E      &hm RSHIFT O    &hm RCTRL I          &kp SQT
-&kp MINUS  &kp Z  &kp X  &kp M  &kp C    &kp V        &kp K    &kp L          &kp COMMA  &kp DOT  &kp FSLH       &kp UNDERSCORE
-                         &mo 2  &kp TAB  &kp SPACE    &kp RET  &kp BACKSPACE  &mo 1
+&kp TAB  &kp Q  &kp W  &kp E  &kp R    &kp T        &kp Y    &kp U          &kp I      &kp O    &kp P  &kp ESC
+&kp    &kp A  &kp S  &kp D  &kp F    &kp G        &kp H    &kp J          &kp K      &kp L    &kp SEMICOLON   &kp SQT
+&kp   &kp Z  &kp X  &kp M  &kp C    &kp V        &kp K    &kp L          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
+                         &mo 2  &kp SPACE  &kp TAB    &kp RET  &kp BACKSPACE  &mo 1
             >;
         };
 
