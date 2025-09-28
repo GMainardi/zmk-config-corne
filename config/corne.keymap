@@ -22,7 +22,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        workman {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -37,7 +37,7 @@
             >;
         };
 
-        lower_layer {
+        num {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -52,7 +52,7 @@
             >;
         };
 
-        raise_layer {
+        func {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -67,12 +67,21 @@
             >;
         };
 
-        layer_4 {
+        qwerty {
             bindings = <
 &kp TAB         &kp Q  &kp W  &kp E  &kp R      &kp T         &kp Y              &kp U          &kp I      &kp O    &kp P          &kp ESC
 &kp EQUAL       &kp A  &kp S  &kp D  &kp F      &kp G         &kp H              &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SQT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V      &kp B         &kp N              &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
-                              &mo 1  &kp SPACE  &kt RETURN    &kt RIGHT_CONTROL  &kp BACKSPACE  &mo 2
+                              &mo 4  &kp SPACE  &kt RETURN    &kt RIGHT_CONTROL  &kp BACKSPACE  &mo 2
+            >;
+        };
+
+        num_qwerty {
+            bindings = <
+&kp TAB    &kp EXCL        &kp AT           &kp HASH          &kp DOLLAR         &kp PERCENT    &kp CARET          &kp AMPERSAND  &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ESCAPE
+&kp EQUAL  &kp NUMBER_1    &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4       &kp N5         &kp NUMBER_6       &kp N7         &kp N8     &kp N9                &kp N0                 &kp MINUS
+&kp LSHFT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDER      &kp GRAVE          &kp PLUS       &kp COMMA  &kp PERIOD            &kp SLASH              &kp RIGHT_SHIFT
+                                            &trans            &kp SPACE          &kp RETURN     &kp RIGHT_CONTROL  &kp BACKSPACE  &to 0
             >;
         };
     };
